@@ -16,7 +16,10 @@ app.post("/contacto", function (req, res) {
   });
   console.log(req.body.email)
   var mailOptiones = {
-    from:  req.body.email,
+    from: {
+        name: 'Consultation',
+        address: req.body.email
+    },
     to: "m.rodriguez@agencialosnavegantes.cl",
     subject: "Enviado desde nodemailer",
     html: req.body.mensajes,
