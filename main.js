@@ -14,7 +14,7 @@ app.post("/contacto", function (req, res) {
       pass: "agencia2020$$",
     },
   });
-  console.log(rreq.body.email)
+  console.log(req.body.email)
   var mailOptiones = {
     from:  req.body.email,
     to: "m.rodriguez@agencialosnavegantes.cl",
